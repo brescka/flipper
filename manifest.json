@@ -1,0 +1,21 @@
+{
+  "name": "Flipper",
+  "version": "1.0",
+  "description": "An extension for rotating and mirroring videos, images, text and more.",
+  "permissions": [
+    "contextMenus"
+  ],
+  "browser_action": {
+      "default_title": "Flipper",
+      "default_icon": {
+        "16": "assets/icons/flipper16.png",
+        "24": "assets/icons/flipper24.png",
+        "32": "assets/icons/flipper32.png",
+        "40": "assets/icons/flipper40.png",
+        "48": "assets/icons/flipper48.png",
+        "64": "assets/icons/flipper64.png"
+      },
+      "default_popup": "src/popup.html"
+  },
+  "manifest_version": 2
+}
