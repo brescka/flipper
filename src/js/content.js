@@ -6,7 +6,7 @@
   let targetElement;
   
   // Data structure that allows us to keep track of different
-  // elements's different rotation angles in an easy way.
+  // elements's own rotation angles in an easy way.
   let angleMap = new Map([]);
 
   const contextMenuHandler = (event) => {
@@ -23,13 +23,11 @@
       currentAngle = angleMap.get(element);
     }
     const newAngle = currentAngle + rotationAngle;
-    console.log(newAngle);
     element.setAttribute("style", `transform: rotate(${newAngle}deg)`);
     angleMap.set(element, newAngle);
   };
 
   const normalizeElement = (element) => {
-    console.log(element);
     if (getComputedStyle(element, null).display === "inline") {
       element.classList.add("flipperNormalized");
     }
