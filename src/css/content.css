@@ -11,3 +11,7 @@
             scaleX(-1)
             scaleY(-1);
 }
+
+.flipperNormalized {
+  display: inline-block;
+}

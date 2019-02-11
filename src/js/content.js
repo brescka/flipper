@@ -1,18 +1,37 @@
 // Injected JS is wrapped in an IIFE to eliminate 
 // possiblity of contaminating any scope.
-
 (() => {
   // This variable holds the last element that the user
   // triggered the context menu on.
   let targetElement;
   
+  // Data structure that allows us to keep track of different
+  // elements's different rotation angles in an easy way.
+  let angleMap = new Map([]);
+
   const contextMenuHandler = (event) => {
     targetElement = event.target;
   };
 
+  const rotate = (element, rotationAngle) => {
+    normalizeElement(element);
+    let currentAngle;
+    if (!angleMap.has(element)) {
+      angleMap.set(element, 0);
+      currentAngle = 0;
+    } else {
+      currentAngle = angleMap.get(element);
+    }
+    const newAngle = currentAngle + rotationAngle;
+    console.log(newAngle);
+    element.setAttribute("style", `transform: rotate(${newAngle}deg)`);
+    angleMap.set(element, newAngle);
+  };
+
   const normalizeElement = (element) => {
+    console.log(element);
     if (getComputedStyle(element, null).display === "inline") {
-      element.style.display = "inline-block";
+      element.classList.add("flipperNormalized");
     }
   }
 
@@ -34,6 +53,12 @@
         break;
       case "verticalFlip":
         flipVertically(targetElement);
+        break;
+      case "rotateRight":
+        rotate(targetElement, 90);
+        break;
+      case "rotateLeft":
+        rotate(targetElement, -90);
         break;
     }
   });
