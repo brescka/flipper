@@ -1,13 +1,23 @@
-const topLevel = chrome.contextMenus.create({
-  "title": "flipper" 
+const topLevelMenu = chrome.contextMenus.create({
+  "id": "topLevel",
+  "title": "flipper",
+  "contexts": ["all"]
 })
 
-const mirrorHorizontally = chrome.contextMenus.create({
-  "title": "Mirror Horizontally",
-  "parentId" : topLevel,
-  "onClicked": mirrorHorizontally
+const flipHorizontallyMenu = chrome.contextMenus.create({
+  "id": "horizontalFlip",
+  "title": "Flip Horizontally (Mirror)",
+  "parentId" : topLevelMenu,
+  "contexts": ["all"]
 })
 
-const mirrorHorizontally = (data) => {
-  
-}
+const flipVerticallyMenu = chrome.contextMenus.create({
+  "id": "verticalFlip",
+  "title": "Flip Vertically",
+  "parentId" : topLevelMenu,
+  "contexts": ["all"]
+})
+
+chrome.contextMenus.onClicked.addListener((data, tab)=>{
+  chrome.tabs.sendMessage(tab.id, data.menuItemId);
+});

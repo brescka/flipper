@@ -1,0 +1,13 @@
+.horizontalFlip {
+  transform: scaleX(-1);
+}
+
+.verticalFlip {
+  transform: scaleY(-1);
+}
+
+.horizontalFlip.verticalFlip {
+  transform: 
+            scaleX(-1)
+            scaleY(-1);
+}
