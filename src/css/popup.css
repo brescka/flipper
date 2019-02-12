@@ -1,0 +1,35 @@
+.card-container {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.body-container {
+  width: 200px;
+  height:auto;
+}
+
+.flipper-icon {
+  content: url('chrome-extension://__MSG_@@extension_id__/assets/icons/flipper.svg');
+  width: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.popup-title {
+    font-size: 32px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    margin-top: -8px;
+}
+
+.popup-container > a {
+  color: #039be5 !important;
+  transition: color .5s ease
+}
+
+.popup-container > a:hover {
+  color: #ffd8a6 !important;
+}
+

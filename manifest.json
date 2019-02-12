@@ -6,6 +6,18 @@
     "activeTab",
     "contextMenus"
   ],
+  "browser_action": {
+    "default_title": "Flipper",
+    "default_icon": {
+      "16": "assets/icons/flipper16.png",
+      "24": "assets/icons/flipper24.png",
+      "32": "assets/icons/flipper32.png",
+      "40": "assets/icons/flipper40.png",
+      "48": "assets/icons/flipper48.png",
+      "64": "assets/icons/flipper64.png"
+    },
+    "default_popup": "src/popup.html"
+  },
   "background": {
     "scripts": ["src/js/background.js"],
     "persistent": false
@@ -18,5 +30,8 @@
       "run_at": "document_end"
     }
   ],
-  "manifest_version": 2
+  "manifest_version": 2,
+  "web_accessible_resources": [
+    "assets/icons/*"
+  ]
 }
