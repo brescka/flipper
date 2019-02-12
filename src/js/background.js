@@ -1,3 +1,8 @@
+// This script's only responsibility
+// is to generate the context menu and 
+// communicate to the injected JS which
+// option was selected.
+
 const topLevelMenu = chrome.contextMenus.create({
   'id': 'topLevel',
   'title': 'flipper',
@@ -43,6 +48,13 @@ chrome.contextMenus.create({
   'id': 'rotateLeft',
   'title': 'Rotate Left (90° Counterclockwise)',
   'parentId': flipMenu,
+  'contexts': ['all']
+})
+
+chrome.contextMenus.create({
+  'id': 'zoomCenter',
+  'title': 'Zoom Center',
+  'parentId': zoomMenu,
   'contexts': ['all']
 })
 
