@@ -5,7 +5,7 @@
 
 const topLevelMenu = chrome.contextMenus.create({
   'id': 'topLevel',
-  'title': 'flipper',
+  'title': 'Flipper',
   'contexts': ['all']
 })
 
