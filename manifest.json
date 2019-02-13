@@ -1,7 +1,7 @@
 {
   "name": "Flipper",
   "version": "1.0",
-  "description": "An extension for rotating and mirroring videos, images, text and more.",
+  "description": "Rotate, zoom, and mirror videos, images, and more.",
   "permissions": [
     "activeTab",
     "contextMenus"
