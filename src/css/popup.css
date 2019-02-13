@@ -25,7 +25,7 @@
 }
 
 .popup-container > a {
-  color: #039be5 !important;
+  color: darkblue !important;
   transition: color .5s ease
 }
 
