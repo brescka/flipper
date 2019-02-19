@@ -1,7 +1,11 @@
+<p align="center">
+  <img width="400" src="assets/icons/flipper.svg">
+</p>
+
 [![JavaScript Style Guide](https://cdn.rawgit.com/standard/standard/master/badge.svg)](https://github.com/standard/standard)
 
 # Flipper
-Flipper is an open source web extension that allows you to mirror, zoom, and rotate images, text and more.
+Flipper is an open source web extension that allows you to mirror, zoom, and rotate images, text and more. To install it from the Chrome store, [click here](https://chrome.google.com/webstore/detail/flipper/ndbojakfkagkdhnfjdkannpehpfdnaan).
 
 # User Guide
 Flipper has two functions: **flipping** and **zooming**. Both are accessed from the right-click context menu.
